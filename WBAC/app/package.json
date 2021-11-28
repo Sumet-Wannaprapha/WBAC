@@ -1,0 +1,73 @@
+{
+  "name": "wbac",
+  "version": "1.0.6",
+  "private": true,
+  "description": "อวท",
+  "main": "index.js",
+  "scripts": {
+    
+    "start": "electron http://119.59.100.51/plesk-site-preview/www.repair1.xyz/https/119.59.100.51/",
+    "build--p": "electron-builder --dir",
+    "build": "electron-builder"
+  },
+  "keywords": [
+    "อวท"
+  ],
+  "author": {
+    "name": "อวท",
+    "email": "sharp0637794267@gmail.com",
+    "url": "https://github.com/Sumet-Wannaprapha"
+  },
+  "build": {
+    "productName": "wbac",
+    "appId": "wbac",
+    "directories": {
+      "output": "export",
+      "buildResources": "build"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "msi"
+      ],
+      "icon": "icons/icon.png"
+    },
+    "mac": {
+      "icon": "icons/icon.icns"
+    },
+    "linux": {
+      "icon": "icons/icon.png",
+      "target": [
+        "deb",
+        "rpm",
+        "appimage",
+        "tar.gz"
+      ]
+    },
+    "nsis": {
+      "installerIcon": "icons/icon.ico",
+      "installerHeaderIcon": "icons/icon.ico",
+      "deleteAppDataOnUninstall": true
+    },
+    "files": [
+      "*.js",
+      "build",
+      "node_modules"
+    ]
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "asar": "^0.14.6",
+    "electron": "^9.4.0",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "electron-builder": "^22.10.5"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "jszip": "^3.6.0",
+    "laravel-mix": "^6.0.25",
+    "notyf": "^3.10.0"
+  }
+}
